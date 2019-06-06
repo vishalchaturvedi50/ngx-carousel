@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { CarouselModule } from 'projects/carousel/src/lib/carousel.module';
 
@@ -11,7 +11,8 @@ import { CarouselModule } from 'projects/carousel/src/lib/carousel.module';
   ],
   imports: [
     BrowserModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

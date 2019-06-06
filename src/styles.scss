@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400&display=swap";
+
+body {
+  font-family: "Noto Sans HK", sans-serif;
+}
+
+.flex--row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex--col {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-p-m {
+  padding: 1em;
+  margin: 1em;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.u-50 {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.inline {
+  display: inline-block;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 {
+  font-weight: 300;
+}

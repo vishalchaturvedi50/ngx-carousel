@@ -1,2 +1,67 @@
-<ngx-carousel style="max-height: 50vh;max-width:100%" [carouselData]="carouselData" [currentIndex]="currentIndex"
-    [showBottomButtons]="showBottomButtons" [showPrevNextButtons]="showPrevNextButtons"></ngx-carousel>
+<div class="flex--row align-items-center justify-content-space-between">
+    <h3>NGX-IMG-Carousel</h3>
+    <a href="https://www.npmjs.com/package/ngx-img-carousel" target="_blank"> <img class="icon-img "
+            src="https://img.icons8.com/color/420/npm.png" /></a>
+</div>
+
+<div class="flex--row">
+
+
+    <div class="u-50 u-p-m ">
+        <ngx-carousel style="max-height: 50vh;max-width:100%" [carouselData]="carouselData"
+            [currentIndex]="currentIndex" [showBottomButtons]="showBottomButtons"
+            [showPrevNextButtons]="showPrevNextButtons" [automaticScrollAllowed]="automaticScrollAllowed"
+            [automaticScrollDurationinMs]="automaticScrollDurationinMs"></ngx-carousel>
+    </div>
+
+    <div class="u-50 flex--col u-p-m ">
+        <label>Image URL's as comma seperated string </label>
+        <textarea [(ngModel)]="carouselImgString" (ngModelChange)="onModelChangeFn()"></textarea>
+
+        <br>
+
+        <label>Show Previous/Next button</label>
+        <div>
+            <input class="inline" type="radio" [value]=true name="prevNext" [(ngModel)]="showPrevNextButtons" />
+            <span class="inline">Yes</span>
+        </div>
+        <div>
+            <input class="inline" type="radio" [value]=false name="prevNext" [(ngModel)]="showPrevNextButtons" />
+            <span class="inline">No</span>
+        </div>
+
+        <br>
+
+        <label>Show Bottom Buttons</label>
+        <div>
+            <input class="inline" type="radio" [value]=true name="bottomBtn" [(ngModel)]="showBottomButtons" />
+            <span class="inline">Yes</span>
+        </div>
+        <div>
+            <input class="inline" type="radio" [value]=false name="bottomBtn" [(ngModel)]="showBottomButtons" />
+            <span class="inline">No</span>
+        </div>
+
+
+        <br>
+        <label>Auto Scroll Enabled</label>
+        <div>
+            <input class="inline" type="radio" [value]=true name="autoScroll" [(ngModel)]="automaticScrollAllowed" />
+            <span class="inline">Yes</span>
+        </div>
+        <div>
+            <input class="inline" type="radio" [value]=false name="autoScroll" [(ngModel)]="automaticScrollAllowed" />
+            <span class="inline">No</span>
+        </div>
+        <br>
+
+        <label>Automatic Scroll Duration (ms)</label>
+        <input type="number" [(ngModel)]="automaticScrollDurationinMs" min="0" />
+
+        <br>
+
+        <label>Initial Start Position</label>
+        <input type="number" [(ngModel)]="currentIndex" min="0" [max]=carouselData.img_urls.length-1 />
+
+    </div>
+</div>

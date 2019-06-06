@@ -24,6 +24,8 @@ This library is an implementation for a carousel with basic CSS and a bit of Jav
 		 [currentIndex]="currentIndex" 
 		 [showBottomButtons]="showBottomButtons" 
 		 [showPrevNextButtons]="showPrevNextButtons"
+		 [automaticScrollAllowed]="automaticScrollAllowed"
+		 [automaticScrollDurationinMs]="automaticScrollDurationinMs"
 		 </ngx-carousel>
 		
 		
@@ -33,6 +35,8 @@ This library is an implementation for a carousel with basic CSS and a bit of Jav
 | currentIndex <optional> | An optional parameter to specify start index for carousel. Default : 0 |
 |showBottomButtons| The carousel has circular buttons at the bottom middle section for easy navigation. You can turn them off/on by passing boolean value for this parameter. Default : true |
 |showPrevNextButtons|The carousel also has previous next buttons at the left and right mid for navigation. You can turn them off/on by passing boolean value for this parameter. Default : true |
+|automaticScrollAllowed| Whether or not automatic scroll for the images are allowed. Default : true|
+|automaticScrollDurationinMs|If an automatic scroll of images are allowed then this parameter can be used to specify the interval for change. Default : 1000 |
 
 		
 ## What's next ? 
