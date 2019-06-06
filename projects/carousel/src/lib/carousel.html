@@ -1,0 +1,21 @@
+<!-- The parent Carousel element -->
+<div class="carousel">
+
+    <!-- ALL THE IMAGES -->
+    <img [src]="urls" class="" [hidden]="idx!=currentIndex" *ngFor="let urls of carouselData.img_urls;let idx=index">
+
+    <!-- PREVIOUS/NEXT DIV -->
+    <div class="btn-div btn-prev" (click)="btnClickFn(-1)">
+        <button>&#8249;</button>
+    </div>
+    <div class="btn-div btn-next" (click)="btnClickFn(1)">
+        <button>&#8250;</button>
+    </div>
+
+    <!-- SHOWING CIRCLES -->
+    <div class="div-cicles" (click)="circBtnClickFn($event)">
+        <div [attr.loopIndex]=idx class="button--circle" [ngClass]="idx==currentIndex?'active':''"
+            *ngFor="let urls of carouselData.img_urls;let idx=index">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+%inherit {
+  max-height: inherit;
+  max-width: inherit;
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flexItem($flexDirection, $alignItems, $justifyItems) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: $alignItems;
+  justify-content: $justifyItems;
+}
+
+.carousel {
+  @extend %inherit;
+  position: relative;
+  @include flexItem(row, center, center);
+  background: black;
+  img {
+    @extend %inherit;
+  }
+  .btn-div {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    cursor: pointer;
+    &.btn-prev {
+      left: 0;
+    }
+    &.btn-next {
+      right: 0;
+      button {
+        right: 0;
+      }
+    }
+    > button {
+      position: absolute;
+      top: 40%;
+      font-size: 2rem;
+      background: none;
+      color: white;
+      outline: none;
+      border: none;
+    }
+  }
+
+  > .div-cicles {
+    @include flexItem(row, baseline, baseline);
+    align-self: flex-end;
+    position: absolute;
+    .button--circle {
+      margin: 0 0.1em;
+      cursor: pointer;
+      &::before {
+        content: " ";
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        @include border-radius(0.5rem);
+        background-color: #f9f9f970;
+        margin-bottom: 0.2rem;
+      }
+      &.active {
+        &::before {
+          background-color: whitesmoke;
+        }
+      }
+    }
+  }
+}
