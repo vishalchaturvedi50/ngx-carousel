@@ -50,3 +50,6 @@ This package is still in it's initial phase and the developer has planned to wor
 
 ## License
 Don't even ask as it is MIT Licensed.  
+
+## Demo
+View a demo of the package at [ngx-img-carousel](https://vishalchaturvedi50.github.io/ngx-img-carousel/)

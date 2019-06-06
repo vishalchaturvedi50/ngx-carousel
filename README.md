@@ -1,27 +1,56 @@
-# NgxCarousel
+# ngx-img-carousel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+  
+This library is an implementation for a carousel with basic CSS and a bit of JavaScript. Feel free to use it for your Angular project implementations and to raise any issues or feature request with help of github [repository](https://github.com/vishalchaturvedi50/ngx-carousel/issues).
 
-## Development server
+## How to use ?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ 1. Install the package from npm.
 
-## Code scaffolding
+		npm install ngx-img-carousel --save
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  2. Import the Module into you application. 
 
-## Build
+		    @NgModule({
+				declarations: [],
+				imports: [CarouselModule],
+				providers: [],
+				bootstrap: []
+			})
+3. Get going!. Use it in your application.  Don't forget to provide a max-height and max-width parameter for better use. 
+ 
+		 <ngx-carousel style="max-height: 50vh;max-width:100%">
+		 [carouselData]="carouselData"
+		 [currentIndex]="currentIndex" 
+		 [showBottomButtons]="showBottomButtons" 
+		 [showPrevNextButtons]="showPrevNextButtons"
+		 [automaticScrollAllowed]="automaticScrollAllowed"
+		 [automaticScrollDurationinMs]="automaticScrollDurationinMs"
+		 </ngx-carousel>
+		
+		
+|Available @Input Parameters| Description |
+|--|--|
+| carouselData | It takes image URL's in { img_urls:[] } format. The Module also exposes interface **ICarouselData** for the same purpose. |
+| currentIndex <optional> | An optional parameter to specify start index for carousel. Default : 0 |
+|showBottomButtons| The carousel has circular buttons at the bottom middle section for easy navigation. You can turn them off/on by passing boolean value for this parameter. Default : true |
+|showPrevNextButtons|The carousel also has previous next buttons at the left and right mid for navigation. You can turn them off/on by passing boolean value for this parameter. Default : true |
+|automaticScrollAllowed| Whether or not automatic scroll for the images are allowed. Default : true|
+|automaticScrollDurationinMs|If an automatic scroll of images are allowed then this parameter can be used to specify the interval for change. Default : 1000 |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+		
+## What's next ? 
 
-## Running unit tests
+This package is still in it's initial phase and the developer has planned to work on below mentioned items on priority : 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ - Providing CSS flexibility to change various aspects.
+ - Provide various animation classes to choose from. 
+ - Make it work with mobile devices.
+ - Listen to the community and build what's relevant.
 
-## Running end-to-end tests
+## License
+Don't even ask as it is MIT Licensed.  
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Demo
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+View a demo of the package at [ngx-img-carousel](https://vishalchaturvedi50.github.io/ngx-img-carousel/)
