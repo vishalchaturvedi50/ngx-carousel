@@ -5,5 +5,21 @@
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "image carousel",
+    "Angular Carousel",
+    "Angular",
+    "Carousel"
+  ],
+  "bugs": {
+    "url": "https://github.com/vishalchaturvedi50/ngx-img-carousel/issues"
+  },
+  "author": {
+    "name": "Vishal Chaturvedi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vishalchaturvedi50/ngx-img-carousel"
+  }
 }
