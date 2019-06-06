@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CarouselDataClass } from './carousel';
+import { ICarouselData } from './carousel';
 
 @Component({
-  selector: 'lib-carousel',
+  selector: 'ngx-carousel',
   templateUrl: 'carousel.html',
   styleUrls: ['carousel.scss']
 })
@@ -12,7 +12,7 @@ export class CarouselComponent implements OnInit {
   @Input() currentIndex: number = 0;
 
   /* A object holding all the URLS provided */
-  @Input() carouselData: CarouselDataClass = {
+  @Input() carouselData: ICarouselData = {
     img_urls: []
   };
 

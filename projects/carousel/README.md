@@ -1,24 +1,48 @@
-# Carousel
+# ngx-img-carousel
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+  
+This library is an implementation for a carousel with basic CSS and a bit of JavaScript. Feel free to use it for your Angular project implementations and to raise any issues or feature request with help of github [repository](https://github.com/vishalchaturvedi50/ngx-carousel/issues).
 
-## Code scaffolding
+## How to use ?
 
-Run `ng generate component component-name --project carousel` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project carousel`.
-> Note: Don't forget to add `--project carousel` or else it will be added to the default project in your `angular.json` file. 
+ 1. Install the package from npm.
 
-## Build
+		npm install ngx-img-carousel --save
 
-Run `ng build carousel` to build the project. The build artifacts will be stored in the `dist/` directory.
+  2. Import the Module into you application. 
 
-## Publishing
+		    @NgModule({
+				declarations: [],
+				imports: [CarouselModule],
+				providers: [],
+				bootstrap: []
+			})
+3. Get going!. Use it in your application.  Don't forget to provide a max-height and max-width parameter for better use. 
+ 
+		 <ngx-carousel style="max-height: 50vh;max-width:100%">
+		 [carouselData]="carouselData"
+		 [currentIndex]="currentIndex" 
+		 [showBottomButtons]="showBottomButtons" 
+		 [showPrevNextButtons]="showPrevNextButtons"
+		 </ngx-carousel>
+		
+		
+|Available @Input Parameters| Description |
+|--|--|
+| carouselData | It takes image URL's in { img_urls:[] } format. The Module also exposes interface **ICarouselData** for the same purpose. |
+| currentIndex <optional> | An optional parameter to specify start index for carousel. Default : 0 |
+|showBottomButtons| The carousel has circular buttons at the bottom middle section for easy navigation. You can turn them off/on by passing boolean value for this parameter. Default : true |
+|showPrevNextButtons|The carousel also has previous next buttons at the left and right mid for navigation. You can turn them off/on by passing boolean value for this parameter. Default : true |
 
-After building your library with `ng build carousel`, go to the dist folder `cd dist/carousel` and run `npm publish`.
+		
+## What's next ? 
 
-## Running unit tests
+This package is still in it's initial phase and the developer has planned to work on below mentioned items on priority : 
 
-Run `ng test carousel` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ - Providing CSS flexibility to change various aspects.
+ - Provide various animation classes to choose from. 
+ - Make it work with mobile devices.
+ - Listen to the community and build what's relevant.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+Don't even ask as it is MIT Licensed.  
