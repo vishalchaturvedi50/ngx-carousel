@@ -1,7 +1,7 @@
 # ngx-img-carousel
 
   
-This library is an implementation for a carousel with basic CSS and a bit of JavaScript. Feel free to use it for your Angular project implementations and to raise any issues or feature request with help of github [repository](https://github.com/vishalchaturvedi50/ngx-carousel/issues).
+This library is an implementation for a carousel with basic CSS and a bit of JavaScript. Feel free to use it for your Angular project implementations and to raise any issues or feature request with help of github [repository](https://github.com/vishalchaturvedi50/ngx-img-carousel/issues).
 
 ## How to use ?
 
@@ -19,14 +19,14 @@ This library is an implementation for a carousel with basic CSS and a bit of Jav
 			})
 3. Get going!. Use it in your application.  Don't forget to provide a max-height and max-width parameter for better use. 
  
-		 <ngx-carousel style="max-height: 50vh;max-width:100%">
+		 <ngx-img-carousel style="max-height: 50vh;max-width:100%">
 		 [carouselData]="carouselData"
 		 [currentIndex]="currentIndex" 
 		 [showBottomButtons]="showBottomButtons" 
 		 [showPrevNextButtons]="showPrevNextButtons"
 		 [automaticScrollAllowed]="automaticScrollAllowed"
 		 [automaticScrollDurationinMs]="automaticScrollDurationinMs"
-		 </ngx-carousel>
+		 </ngx-img-carousel>
 		
 		
 |Available @Input Parameters| Description |

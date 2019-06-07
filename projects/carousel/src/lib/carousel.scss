@@ -23,6 +23,8 @@
   background: black;
   img {
     @extend %inherit;
+    height: inherit;
+    width: inherit;
   }
   .btn-div {
     position: absolute;
