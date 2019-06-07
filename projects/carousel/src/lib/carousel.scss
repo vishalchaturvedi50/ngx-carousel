@@ -29,6 +29,7 @@
     height: 100%;
     width: 20%;
     cursor: pointer;
+    @include flexItem(row, center, end);
     &.btn-prev {
       left: 0;
       button {
@@ -36,6 +37,7 @@
       }
     }
     &.btn-next {
+      justify-content: flex-end;
       right: 0;
       button {
         right: 0;
@@ -43,8 +45,6 @@
       }
     }
     > button {
-      position: absolute;
-      top: 40%;
       font-size: 2rem;
       background: none;
       color: white;
@@ -58,13 +58,13 @@
     align-self: flex-end;
     position: absolute;
     .button--circle {
-      margin: 0 0.1em;
+      margin: 0 0.1rem;
       cursor: pointer;
       &::before {
         content: " ";
         display: inline-block;
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 0.5rem;
+        height: 0.5rem;
         @include border-radius(0.5rem);
         background-color: #f9f9f970;
         margin-bottom: 0.2rem;
