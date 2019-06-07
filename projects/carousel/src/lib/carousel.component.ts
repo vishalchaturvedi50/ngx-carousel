@@ -2,7 +2,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 import { ICarouselData } from './carousel';
 
 @Component({
-  selector: 'ngx-carousel',
+  selector: 'ngx-img-carousel',
   templateUrl: 'carousel.html',
   styleUrls: ['carousel.scss']
 })

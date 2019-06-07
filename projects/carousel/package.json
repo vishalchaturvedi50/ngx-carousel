@@ -1,6 +1,6 @@
 {
   "name": "ngx-img-carousel",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
@@ -10,7 +10,9 @@
     "image carousel",
     "Angular Carousel",
     "Angular",
-    "Carousel"
+    "Carousel",
+    "Angular image carousel",
+    "ngx-img-carousel"
   ],
   "bugs": {
     "url": "https://github.com/vishalchaturvedi50/ngx-img-carousel/issues"
