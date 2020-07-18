@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+ "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "private": false,
   "dependencies": {
     "@angular/animations": "~7.2.0",
